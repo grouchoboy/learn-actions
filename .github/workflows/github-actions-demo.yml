@@ -1,0 +1,12 @@
+name: Github Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+         python-version: '3.8'
+      - run: python --version
